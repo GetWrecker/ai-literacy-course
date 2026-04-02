@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chatbots for Websites - Module 5</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+    <nav style="padding: 1rem; background: #eee;">
+        <a href="../index.html">← Back to Course Home</a>
+    </nav>
+
+    <main class="container">
+        <article>
+            <h1>Module 5: Chatbots & Virtual Assistants</h1>
+            <p>In 2026, a website without a chatbot is like a store without a clerk. Chatbots have evolved from simple "FAQ bots" into <strong>Agentic AI</strong> that can perform real tasks.</p>
+
+            <section>
+                <h2>1. Why Every Site Needs One</h2>
+                <div class="card" style="border-left: 5px solid #8b5cf6; background: #f5f3ff;">
+                    <ul>
+                        <li><strong>24/7 Instant Support:</strong> While you sleep, your bot answers 2 AM queries, ensuring you never miss a lead.</li>
+                        <li><strong>Scalability:</strong> A bot can handle 1,000 conversations simultaneously—something no human team can do.</li>
+                        <li><strong>Lower Friction:</strong> Instead of filling out a boring "Contact Us" form, users prefer a quick chat to get immediate answers.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>2. From "Informational" to "Agentic"</h2>
+                <p>Modern chatbots don't just talk; they <strong>act</strong>. This is known as "Agentic AI."</p>
+                <table>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Old Chatbots (2020-2023)</th>
+                        <th>Modern AI Agents (2026)</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Responses</strong></td>
+                        <td>Pre-written scripts</td>
+                        <td>Dynamic, human-like reasoning</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Capabilities</strong></td>
+                        <td>Answer basic questions</td>
+                        <td>Book appointments, process refunds</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Memory</strong></td>
+                        <td>Forgets you instantly</td>
+                        <td>Remembers past orders & preferences</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section>
+                <h2>3. Implementation for Blogs & Businesses</h2>
+                <p>You don't need to be a senior developer to add AI to your site. Here are the three main paths:</p>
+                <ul>
+                    <li><strong>No-Code Platforms:</strong> Tools like Botpress or Intercom allow you to "drag and drop" your bot's logic.</li>
+                    <li><strong>RAG (Retrieval-Augmented Generation):</strong> You can "feed" your blog posts or business PDFs into an AI so it only answers based on <em>your</em> specific knowledge.</li>
+                    <li><strong>Custom Integration:</strong> Using APIs (like OpenAI or Gemini) to build a unique experience directly into your site's code.</li>
+                </ul>
+            </section>
+
+            <section id="demo-bot">
+                <h3>Live Concept: The "Assistant" Logic</h3>
+                <p>Imagine a user asks: <em>"Do you have a table for 4 tonight?"</em></p>
+                <div class="card">
+                    <code>
+                        // Simplified AI Logic:<br>
+                        IF (user_intent == "booking") { <br>
+                        &nbsp;&nbsp;CHECK_CALENDAR(date: "tonight", size: 4);<br>
+                        &nbsp;&nbsp;RETURN "Yes! We have a spot at 7:00 PM.";<br>
+                        }
+                    </code>
+                </div>
+            </section>
+        </article>
+    </main>
+</body>
+</html>
