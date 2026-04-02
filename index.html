@@ -3,39 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Literacy 2026 | Interactive Modules</title>
+    <title>AI Literacy 2026 | Interactive Course</title>
     <link rel="stylesheet" href="assets/style.css">
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
     <header>
-        <h1>AI Literacy & Strategic Implementation</h1>
-        <p>Master the tools of 2026: From LLM Foundations to GEO and Agentic Workflows.</p>
+        <div class="container">
+            <h1>AI Literacy & Strategic Implementation</h1>
+            <p>From Foundations to GEO and Agentic Workflows.</p>
+        </div>
     </header>
 
     <main class="container">
         <section class="grid-layout">
             <div class="card" onclick="location.href='modules/01-intro.html'">
-                <i data-lucide="info"></i>
+                <i data-lucide="brain"></i>
                 <h3>1. Foundations</h3>
-                <p>What is AI in 2026? Neural nets vs. reasoning engines.</p>
+                <p>What is AI? Neural nets vs. reasoning engines.</p>
+            </div>
+            <div class="card" onclick="location.href='modules/02-dangers.html'">
+                <i data-lucide="shield-alert"></i>
+                <h3>2. Risks & Ethics</h3>
+                <p>Navigating bias, deepfakes, and privacy.</p>
+            </div>
+            <div class="card" onclick="location.href='modules/03-daily-life.html'">
+                <i data-lucide="home"></i>
+                <h3>3. Daily Life</h3>
+                <p>AI as a personal assistant and productivity tool.</p>
             </div>
             <div class="card" onclick="location.href='modules/04-business.html'">
                 <i data-lucide="trending-up"></i>
                 <h3>4. Business & GEO</h3>
-                <p>Optimize your site for AI Search (Generative Engine Optimization).</p>
+                <p>Strategic SEO for the Generative AI era.</p>
+            </div>
+            <div class="card" onclick="location.href='modules/05-chatbots.html'">
+                <i data-lucide="bot"></i>
+                <h3>5. Chatbot Agents</h3>
+                <p>Deploying AI for 24/7 customer interaction.</p>
+            </div>
+            <div class="card" onclick="location.href='modules/06-llms.html'">
+                <i data-lucide="layers"></i>
+                <h3>6. LLMs Explained</h3>
+                <p>How GPT models predict and generate tokens.</p>
             </div>
             <div class="card" onclick="location.href='modules/07-prompting.html'">
                 <i data-lucide="message-square"></i>
                 <h3>7. Prompt Engineering</h3>
-                <p>Learn the C.R.E.A.D framework for perfect outputs.</p>
+                <p>Mastering the C.R.E.A.D framework for results.</p>
             </div>
-            </section>
+            <div class="card" onclick="location.href='modules/08-tools.html'">
+                <i data-lucide="wrench"></i>
+                <h3>8. AI Tool Landscape</h3>
+                <p>The 2026 directory for text, image, and code.</p>
+            </div>
+            <div class="card" onclick="location.href='modules/09-balance.html'">
+                <i data-lucide="scale"></i>
+                <h3>9. Pros vs. Cons</h3>
+                <p>The ultimate balance sheet of the AI age.</p>
+            </div>
+        </section>
 
-        <section id="demo" class="card" style="margin-top: 3rem;">
-            <h2>Live AI Concept: Sentiment Analysis</h2>
-            <textarea id="ai-input" placeholder="Type a sentence about AI..."></textarea>
-            <button onclick="analyzeSentiment()">Test Sentiment</button>
+        <section id="sentiment-tool" class="card main-demo">
+            <h2>Interactive Tool: AI Sentiment Check</h2>
+            <textarea id="ai-input" placeholder="Type a sentence about how you feel about AI..."></textarea>
+            <button onclick="analyzeSentiment()">Analyze My Mood</button>
             <p id="result"></p>
         </section>
     </main>
