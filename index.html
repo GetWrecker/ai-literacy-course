@@ -3,71 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Literacy Interactive Course</title>
+    <title>AI Literacy 2026 | Interactive Modules</title>
     <link rel="stylesheet" href="assets/style.css">
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
     <header>
-        <h1>AI Literacy & Implementation</h1>
-        <p>A Complete Guide for Daily Life, Business, and Web Development.</p>
+        <h1>AI Literacy & Strategic Implementation</h1>
+        <p>Master the tools of 2026: From LLM Foundations to GEO and Agentic Workflows.</p>
     </header>
 
     <main class="container">
-        <section id="course-map" class="grid-layout">
+        <section class="grid-layout">
             <div class="card" onclick="location.href='modules/01-intro.html'">
-                <i data-lucide="brain"></i>
-                <h3>1. What is AI?</h3>
-                <p>Foundations and the "Brain" of the machine.</p>
-            </div>
-            <div class="card" onclick="location.href='modules/02-dangers.html'">
-                <i data-lucide="shield-alert"></i>
-                <h3>2. Risks & Ethics</h3>
-                <p>Deepfakes, bias, and data privacy.</p>
-            </div>
-            <div class="card" onclick="location.href='modules/03-daily-life.html'">
-                <i data-lucide="home"></i>
-                <h3>3. AI in Daily Life</h3>
-                <p>Hacks for productivity and wellness.</p>
+                <i data-lucide="info"></i>
+                <h3>1. Foundations</h3>
+                <p>What is AI in 2026? Neural nets vs. reasoning engines.</p>
             </div>
             <div class="card" onclick="location.href='modules/04-business.html'">
-                <i data-lucide="briefcase"></i>
+                <i data-lucide="trending-up"></i>
                 <h3>4. Business & GEO</h3>
-                <p>SEO for AI and scaling operations.</p>
-            </div>
-            <div class="card" onclick="location.href='modules/05-chatbots.html'">
-                <h3>5. Chatbot Integration</h3>
-                <p>Deploying AI agents to your website.</p>
-            </div>
-
-            <div class="card" onclick="location.href='modules/06-llms.html'">
-                <i data-lucide="layers"></i>
-                <h3>6. LLMs Explained</h3>
-                <p>How GPT and Gemini use tokens to "think".</p>
+                <p>Optimize your site for AI Search (Generative Engine Optimization).</p>
             </div>
             <div class="card" onclick="location.href='modules/07-prompting.html'">
-                <i data-lucide="terminal"></i>
+                <i data-lucide="message-square"></i>
                 <h3>7. Prompt Engineering</h3>
-                <p>Mastering the art of AI communication.</p>
+                <p>Learn the C.R.E.A.D framework for perfect outputs.</p>
             </div>
-            <div class="card" onclick="location.href='modules/08-tools.html'">
-                <i data-lucide="wrench"></i>
-                <h3>8. AI Tool Landscape</h3>
-                <p>Directory for Text, Image, and Code tools.</p>
-            </div>
-            <div class="card" onclick="location.href='modules/09-balance.html'">
-                <i data-lucide="scale"></i>
-                <h3>9. Pros vs. Cons</h3>
-                <p>The balanced truth about the AI revolution.</p>
-            </div>
-        </section>
+            </section>
 
-        <hr>
-
-        <section id="interactive-demo">
-            <h2>Interactive Tool: AI Sentiment Check</h2>
-            <textarea id="ai-input" placeholder="How do you feel about AI today?"></textarea>
-            <button onclick="analyzeSentiment()">Analyze My Mood</button>
+        <section id="demo" class="card" style="margin-top: 3rem;">
+            <h2>Live AI Concept: Sentiment Analysis</h2>
+            <textarea id="ai-input" placeholder="Type a sentence about AI..."></textarea>
+            <button onclick="analyzeSentiment()">Test Sentiment</button>
             <p id="result"></p>
         </section>
     </main>
