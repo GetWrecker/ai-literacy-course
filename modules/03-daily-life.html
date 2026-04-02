@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI in Daily Life - Module 3</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+    <nav style="padding: 1rem; background: #eee;">
+        <a href="../index.html">← Back to Course Home</a>
+    </nav>
+
+    <main class="container">
+        <article>
+            <h1>Module 3: AI in Your Daily Life</h1>
+            <p>You don't need to be a scientist to use AI. In fact, you've likely used it several times today already.</p>
+
+            <section>
+                <h2>1. The "Invisible" AI</h2>
+                <p>AI often works behind the scenes to make our digital experiences smoother:</p>
+                <ul>
+                    <li><strong>Smart Keyboards:</strong> Predictive text and autocorrect use NLP (Natural Language Processing) to guess your next word.</li>
+                    <li><strong>Streaming Services:</strong> Netflix and Spotify use recommendation engines to suggest content based on your past behavior.</li>
+                    <li><strong>Navigation:</strong> Google Maps uses AI to predict traffic patterns and suggest the fastest routes in real-time.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>2. AI as a Personal Assistant</h2>
+                <p>Modern Generative AI (like ChatGPT or Gemini) acts as a "second brain" for productivity:</p>
+                <div class="card" style="border-left: 5px solid #10b981; background: #ecfdf5;">
+                    <strong>Daily Hacks:</strong>
+                    <ul>
+                        <li>Summarizing long emails or articles.</li>
+                        <li>Drafting meal plans based on what's in your fridge.</li>
+                        <li>Explaining complex topics (like taxes or physics) in simple terms.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>3. Health and Wellness</h2>
+                <p>Wearable devices use AI to monitor your heart rate, sleep patterns, and activity levels, alerting you to potential health issues before they become serious.</p>
+            </section>
+
+            <section id="interactive-check">
+                <h3>Is it AI?</h3>
+                <p>Determine if the following daily tasks use AI:</p>
+                <div id="quiz-options">
+                    <button onclick="checkDaily(true)">FaceID to unlock a phone</button>
+                    <button onclick="checkDaily(false)">Setting a simple kitchen timer</button>
+                    <button onclick="checkDaily(true)">Spam filters in your Email</button>
+                </div>
+                <p id="daily-feedback" style="margin-top: 15px; font-weight: bold;"></p>
+            </section>
+        </article>
+    </main>
+
+    <script>
+        function checkDaily(isAI) {
+            const feedback = document.getElementById('daily-feedback');
+            if (isAI) {
+                feedback.innerText = "Correct! That uses pattern recognition or machine learning.";
+                feedback.style.color = "#059669";
+            } else {
+                feedback.innerText = "That's a simple mechanical or digital rule, not AI.";
+                feedback.style.color = "#4b5563";
+            }
+        }
+    </script>
+</body>
+</html>
