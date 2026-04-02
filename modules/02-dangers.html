@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Risks & Ethics - Module 2</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+    <nav style="padding: 1rem; background: #eee;">
+        <a href="../index.html">← Back to Course Home</a>
+    </nav>
+
+    <main class="container">
+        <article>
+            <h1>Module 2: The Dangers of AI</h1>
+            <p>With great power comes great responsibility. Understanding the risks of AI is the first step toward using it safely and ethically.</p>
+
+            <section>
+                <h2>1. Algorithmic Bias</h2>
+                <p>AI learns from historical data. If that data contains human prejudices—intentional or not—the AI will replicate and scale those biases.</p>
+                <div class="card" style="border-left: 5px solid #e11d48; background: #fff1f2;">
+                    <strong>Example:</strong> A hiring AI that favors resumes from men because it was trained on 20 years of male-dominated hiring data.
+                </div>
+            </section>
+
+            <section>
+                <h2>2. Deepfakes & Misinformation</h2>
+                <p>Generative AI can create hyper-realistic images, videos, and audio. This makes it easier for bad actors to spread "fake news" or impersonate individuals for fraud.</p>
+                <ul>
+                    <li>Always verify "viral" AI content through multiple sources.</li>
+                    <li>Check for "glitches" (extra fingers in photos, unnatural blinking in video).</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>3. The "Black Box" Problem</h2>
+                <p>Deep learning models are often so complex that even the engineers who built them can't explain exactly <em>why</em> the AI made a specific decision. This lack of transparency is a major hurdle in law and medicine.</p>
+            </section>
+
+            <section>
+                <h2>4. Data Privacy</h2>
+                <p>Every prompt you give to a public AI might be used to train future versions of that model. <strong>Never</strong> upload sensitive business data, passwords, or personal medical records to public AI tools.</p>
+            </section>
+
+            <section id="interactive-risk">
+                <h3>Risk Assessment Challenge</h3>
+                <p>An AI tool suggests a medical diagnosis based on a photo. Should you trust it immediately?</p>
+                <button onclick="document.getElementById('risk-ans').style.display='block'">Check Answer</button>
+                <p id="risk-ans" style="display:none; margin-top:10px; color: #b91c1c; font-weight: bold;">
+                    No. AI should be a "Co-pilot," not the pilot. Always verify critical AI outputs with a human expert.
+                </p>
+            </section>
+        </article>
+    </main>
+</body>
+</html>
