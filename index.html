@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Literacy: Interactive Course</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <header>
+        <h1>AI Literacy & Implementation</h1>
+        <p>Master the fundamentals, ethics, and integration of Artificial Intelligence.</p>
+    </header>
+
+    <main class="container">
+        <section id="course-map">
+            <div class="card" onclick="location.href='modules/01-intro.html'">
+                <h3>1. What is AI?</h3>
+                <p>Understanding the "Brain" of the machine.</p>
+            </div>
+            <div class="card" onclick="location.href='modules/04-business.html'">
+                <h3>2. AI for Business & GEO</h3>
+                <p>Generative Engine Optimization and scaling.</p>
+            </div>
+            <div class="card" onclick="location.href='modules/05-chatbots.html'">
+                <h3>3. Chatbot Integration</h3>
+                <p>Making your website talk.</p>
+            </div>
+        </section>
+
+        <section id="interactive-demo">
+            <h2>Interactive Tool: AI Sentiment Check</h2>
+            <textarea id="ai-input" placeholder="Type how you feel about AI..."></textarea>
+            <button onclick="analyzeSentiment()">Analyze</button>
+            <p id="result"></p>
+        </section>
+    </main>
+
+    <script src="assets/script.js"></script>
+</body>
+</html>
