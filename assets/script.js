@@ -7,21 +7,27 @@ function analyzeSentiment() {
         return;
     }
 
-    const pos = ['happy', 'good', 'excited', 'great', 'love', 'helpful'];
-    const neg = ['scared', 'bad', 'danger', 'worry', 'threat', 'stop'];
+    const positive = ['good', 'great', 'excited', 'love', 'amazing', 'help', 'future'];
+    const negative = ['scared', 'bad', 'danger', 'worry', 'threat', 'stop', 'hate'];
 
     let score = 0;
-    pos.forEach(w => { if(text.includes(w)) score++ });
-    neg.forEach(w => { if(text.includes(w)) score-- });
+    positive.forEach(word => { if(text.includes(word)) score++ });
+    negative.forEach(word => { if(text.includes(word)) score-- });
+
+    result.style.padding = "10px";
+    result.style.borderRadius = "5px";
 
     if(score > 0) {
-        result.innerText = "😊 AI Analysis: You seem optimistic and ready for the future!";
-        result.style.color = "#10b981";
+        result.innerText = "😊 AI Sentiment: Optimistic. You see the potential!";
+        result.style.background = "#dcfce7";
+        result.style.color = "#166534";
     } else if (score < 0) {
-        result.innerText = "⚠️ AI Analysis: You have valid concerns. Caution is good in AI literacy.";
-        result.style.color = "#ef4444";
+        result.innerText = "⚠️ AI Sentiment: Cautious. You are aware of the risks!";
+        result.style.background = "#fee2e2";
+        result.style.color = "#991b1b";
     } else {
-        result.innerText = "😐 AI Analysis: You are neutral or exploring. Keep learning!";
-        result.style.color = "#64748b";
+        result.innerText = "😐 AI Sentiment: Neutral. Keep exploring!";
+        result.style.background = "#f1f5f9";
+        result.style.color = "#475569";
     }
 }
