@@ -3,40 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Literacy: Interactive Course</title>
+    <title>AI Literacy Interactive Course</title>
     <link rel="stylesheet" href="assets/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
     <header>
         <h1>AI Literacy & Implementation</h1>
-        <p>Master the fundamentals, ethics, and integration of Artificial Intelligence.</p>
+        <p>A Complete Guide for Daily Life, Business, and Web Development.</p>
     </header>
 
     <main class="container">
-        <section id="course-map">
+        <section id="course-map" class="grid-layout">
             <div class="card" onclick="location.href='modules/01-intro.html'">
+                <i data-lucide="brain"></i>
                 <h3>1. What is AI?</h3>
-                <p>Understanding the "Brain" of the machine and why it matters.</p>
+                <p>Foundations and the "Brain" of the machine.</p>
             </div>
-
             <div class="card" onclick="location.href='modules/02-dangers.html'">
+                <i data-lucide="shield-alert"></i>
                 <h3>2. Risks & Ethics</h3>
-                <p>Navigating bias, deepfakes, and data privacy concerns.</p>
+                <p>Deepfakes, bias, and data privacy.</p>
             </div>
-
             <div class="card" onclick="location.href='modules/03-daily-life.html'">
+                <i data-lucide="home"></i>
                 <h3>3. AI in Daily Life</h3>
-                <p>Practical hacks and invisible AI you use every day.</p>
+                <p>Hacks for productivity and wellness.</p>
             </div>
-
             <div class="card" onclick="location.href='modules/04-business.html'">
+                <i data-lucide="briefcase"></i>
                 <h3>4. Business & GEO</h3>
-                <p>Generative Engine Optimization and AI scaling strategies.</p>
+                <p>SEO for AI and scaling operations.</p>
             </div>
-
             <div class="card" onclick="location.href='modules/05-chatbots.html'">
                 <h3>5. Chatbot Integration</h3>
-                <p>How to deploy AI agents and bots to your website or blog.</p>
+                <p>Deploying AI agents to your website.</p>
+            </div>
+
+            <div class="card" onclick="location.href='modules/06-llms.html'">
+                <i data-lucide="layers"></i>
+                <h3>6. LLMs Explained</h3>
+                <p>How GPT and Gemini use tokens to "think".</p>
+            </div>
+            <div class="card" onclick="location.href='modules/07-prompting.html'">
+                <i data-lucide="terminal"></i>
+                <h3>7. Prompt Engineering</h3>
+                <p>Mastering the art of AI communication.</p>
+            </div>
+            <div class="card" onclick="location.href='modules/08-tools.html'">
+                <i data-lucide="wrench"></i>
+                <h3>8. AI Tool Landscape</h3>
+                <p>Directory for Text, Image, and Code tools.</p>
+            </div>
+            <div class="card" onclick="location.href='modules/09-balance.html'">
+                <i data-lucide="scale"></i>
+                <h3>9. Pros vs. Cons</h3>
+                <p>The balanced truth about the AI revolution.</p>
             </div>
         </section>
 
@@ -44,13 +66,13 @@
 
         <section id="interactive-demo">
             <h2>Interactive Tool: AI Sentiment Check</h2>
-            <p>Try this simple logic to see how AI "reads" your input.</p>
-            <textarea id="ai-input" placeholder="Type how you feel about AI today..."></textarea>
+            <textarea id="ai-input" placeholder="How do you feel about AI today?"></textarea>
             <button onclick="analyzeSentiment()">Analyze My Mood</button>
-            <p id="result" style="font-weight: bold; margin-top: 10px;"></p>
+            <p id="result"></p>
         </section>
     </main>
 
     <script src="assets/script.js"></script>
+    <script>lucide.createIcons();</script>
 </body>
 </html>
