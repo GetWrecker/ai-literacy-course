@@ -1,23 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8"><title>LLMs Explained</title>
-    <link rel="stylesheet" href="../assets/style.css">
-</head>
+<head><meta charset="UTF-8"><link rel="stylesheet" href="../assets/style.css"><title>LLMs Explained</title></head>
 <body>
-    <div class="nav-bar"><a href="../index.html">← Home</a> | Module 6: Large Language Models</div>
+    <nav class="nav-bar"><a href="../index.html">← Back</a></nav>
     <div class="container">
-        <h1>How do LLMs actually work?</h1>
-        <p>Models like ChatGPT and Gemini are <strong>Large Language Models</strong>. They don't "know" facts; they predict the next piece of a puzzle.</p>
+        <h1>How LLMs Predict the World</h1>
+        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1200" class="hero-img">
         
-        <h2>1. Tokens vs. Words</h2>
-        <p>AI breaks text into <strong>tokens</strong> (parts of words). For example, "hamburger" might be 3 tokens: "ham", "bur", and "ger".</p>
+        <h2>Tokens and Probability</h2>
+        <p>Large Language Models don't read "words"; they process <strong>tokens</strong>. AI acts as a sophisticated "Next Token Predictor."</p>
         
-        <h2>2. Probability Engines</h2>
-        <p>If you type "The cat sat on the...", the AI looks at its massive database and realizes "mat" is the most statistically likely next word.</p>
-
-        <div class="pro-tip">
-            <strong>Key Concept:</strong> AI is essentially an ultra-advanced autocomplete system trained on nearly the entire public internet.
+        <div class="card">
+            <h3>Example: The Cat sat on the...</h3>
+            <p>AI calculates the probability of the next token: <br>
+            - "Mat" (85%) <br>
+            - "Floor" (10%) <br>
+            - "Pizza" (0.1%)</p>
         </div>
     </div>
 </body>
