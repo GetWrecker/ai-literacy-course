@@ -3,81 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Chatbots for Websites - Module 5</title>
+    <title>Smart AI Chatbots - Master Module</title>
     <link rel="stylesheet" href="../assets/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .workflow-box { background: #f8fafc; border: 2px dashed var(--primary); padding: 2rem; border-radius: 15px; margin: 2rem 0; display: flex; flex-direction: column; gap: 1rem; }
+        .step { display: flex; align-items: center; gap: 1rem; background: white; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); transition: transform 0.2s; }
+        .step:hover { transform: scale(1.02); }
+        .step-num { background: var(--primary); color: white; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-weight: bold; }
+        .type-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+        .type-card { text-align: center; padding: 2rem; border-radius: 12px; background: white; border: 1px solid #e2e8f0; }
+        .type-card i { font-size: 2rem; color: var(--secondary); margin-bottom: 1rem; }
+        .logic-branch { border-left: 3px solid var(--accent); padding-left: 1.5rem; margin: 1.5rem 0; }
+        .status-badge { background: #e0f2fe; color: #0369a1; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; text-transform: uppercase; }
+    </style>
 </head>
 <body>
-    <nav style="padding: 1rem; background: #eee;">
-        <a href="../index.html">← Back to Course Home</a>
+    <nav class="nav-bar">
+        <a href="../index.html">← Back to Dashboard</a>
+        <span>Module 5: Smart AI Chatbots</span>
     </nav>
 
-    <main class="container">
-        <article>
-            <h1>Module 5: Chatbots & Virtual Assistants</h1>
-            <p>In 2026, a website without a chatbot is like a store without a clerk. Chatbots have evolved from simple "FAQ bots" into <strong>Agentic AI</strong> that can perform real tasks.</p>
+    <div class="container">
+        <header style="margin-bottom: 3rem;">
+            <span class="status-badge">Conversational AI</span>
+            <h1>Smart AI Chatbots & Agents</h1>
+            <p>From simple scripts to intelligent systems that understand intent and drive business value.</p>
+        </header>
 
-            <section>
-                <h2>1. Why Every Site Needs One</h2>
-                <div class="card" style="border-left: 5px solid #8b5cf6; background: #f5f3ff;">
-                    <ul>
-                        <li><strong>24/7 Instant Support:</strong> While you sleep, your bot answers 2 AM queries, ensuring you never miss a lead.</li>
-                        <li><strong>Scalability:</strong> A bot can handle 1,000 conversations simultaneously—something no human team can do.</li>
-                        <li><strong>Lower Friction:</strong> Instead of filling out a boring "Contact Us" form, users prefer a quick chat to get immediate answers.</li>
-                    </ul>
-                </div>
-            </section>
+        <img src="https://images.unsplash.com/photo-1531746790731-6c087fecd05a?auto=format&fit=crop&q=80&w=1200" class="hero-img">
 
-            <section>
-                <h2>2. From "Informational" to "Agentic"</h2>
-                <p>Modern chatbots don't just talk; they <strong>act</strong>. This is known as "Agentic AI."</p>
-                <table>
-                    <tr>
-                        <th>Feature</th>
-                        <th>Old Chatbots (2020-2023)</th>
-                        <th>Modern AI Agents (2026)</th>
-                    </tr>
-                    <tr>
-                        <td><strong>Responses</strong></td>
-                        <td>Pre-written scripts</td>
-                        <td>Dynamic, human-like reasoning</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Capabilities</strong></td>
-                        <td>Answer basic questions</td>
-                        <td>Book appointments, process refunds</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Memory</strong></td>
-                        <td>Forgets you instantly</td>
-                        <td>Remembers past orders & preferences</td>
-                    </tr>
-                </table>
-            </section>
+        <section id="objectives" class="pro-tip">
+            <h3>Learning Objectives</h3>
+            <p>Understand the mechanics of NLP (Natural Language Processing), differentiate between rule-based and AI models, and implement conversational strategies for GEO visibility.</p>
+        </section>
 
-            <section>
-                <h2>3. Implementation for Blogs & Businesses</h2>
-                <p>You don't need to be a senior developer to add AI to your site. Here are the three main paths:</p>
-                <ul>
-                    <li><strong>No-Code Platforms:</strong> Tools like Botpress or Intercom allow you to "drag and drop" your bot's logic.</li>
-                    <li><strong>RAG (Retrieval-Augmented Generation):</strong> You can "feed" your blog posts or business PDFs into an AI so it only answers based on <em>your</em> specific knowledge.</li>
-                    <li><strong>Custom Integration:</strong> Using APIs (like OpenAI or Gemini) to build a unique experience directly into your site's code.</li>
-                </ul>
-            </section>
+        <h2 style="margin-top: 4rem;">The Evolution of Chatbots</h2>
+        <div class="type-grid">
+            <div class="type-card">
+                <i data-lucide="list-checks"></i>
+                <h3>Rule-Based</h3>
+                <p>Follows a fixed decision tree. Limited but predictable. Best for simple FAQs.</p>
+            </div>
+            <div class="type-card">
+                <i data-lucide="sparkles"></i>
+                <h3>AI-Powered</h3>
+                <p>Uses LLMs and NLP to understand context. Learns from every conversation.</p>
+            </div>
+            <div class="type-card">
+                <i data-lucide="git-branch"></i>
+                <h3>Hybrid</h3>
+                <p>The industry standard. Rules for logic, AI for natural conversation.</p>
+            </div>
+        </div>
 
-            <section id="demo-bot">
-                <h3>Live Concept: The "Assistant" Logic</h3>
-                <p>Imagine a user asks: <em>"Do you have a table for 4 tonight?"</em></p>
-                <div class="card">
-                    <code>
-                        // Simplified AI Logic:<br>
-                        IF (user_intent == "booking") { <br>
-                        &nbsp;&nbsp;CHECK_CALENDAR(date: "tonight", size: 4);<br>
-                        &nbsp;&nbsp;RETURN "Yes! We have a spot at 7:00 PM.";<br>
-                        }
-                    </code>
-                </div>
-            </section>
-        </article>
-    </main>
+        <h2>How AI Chatbots "Think"</h2>
+        <p>The processing loop happens in milliseconds, following four critical steps:</p>
+        
+        <div class="workflow-box">
+            <div class="step">
+                <div class="step-num">1</div>
+                <div><strong>User Input:</strong> The system captures raw text or voice data.</div>
+            </div>
+            <div class="step">
+                <div class="step-num">2</div>
+                <div><strong>NLP Analysis:</strong> Identifies <em>Intent</em> (what they want) and <em>Entities</em> (specific details like dates or names).</div>
+            </div>
+            <div class="step">
+                <div class="step-num">3</div>
+                <div><strong>Decision Engine:</strong> The AI consults its knowledge base or external APIs to find the answer.</div>
+            </div>
+            <div class="step">
+                <div class="step-num">4</div>
+                <div><strong>Generation:</strong> A human-like response is generated and sent back to the user.</div>
+            </div>
+        </div>
+
+        <h2>Why Chatbots are Non-Negotiable</h2>
+        <div class="grid-layout">
+            <div class="card">
+                <h3><i data-lucide="clock" style="width:20px;"></i> 24/7 Support</h3>
+                <p>Instant resolution for customers in any timezone without increasing payroll costs.</p>
+            </div>
+            <div class="card">
+                <h3><i data-lucide="users-2" style="width:20px;"></i> Mass Scalability</h3>
+                <p>A single AI agent can handle 10,000 conversations simultaneously with zero lag.</p>
+            </div>
+        </div>
+
+        <div class="pro-tip" style="background: #fef2f2; border-color: var(--danger); margin-top: 3rem;">
+            <h3>Chatbots and GEO (AI Visibility)</h3>
+            <p>Smart chatbots help structure your business data. When a chatbot provides a direct answer on your site, it creates a "schema" that search engines and other AIs use to cite you as an authoritative source.</p>
+        </div>
+
+        <h2 style="margin-top: 4rem;">Mastering Conversational Design</h2>
+        <div class="logic-branch">
+            <h4>Provide a Human Fallback</h4>
+            <p>Never trap a user in a loop. Always provide a "Talk to a Human" option if the AI fails twice.</p>
+        </div>
+        <div class="logic-branch">
+            <h4>Continuous Training</h4>
+            <p>Audit chat logs weekly to identify where the bot misunderstood intent and update the training data.</p>
+        </div>
+
+        <section class="quiz-box" style="background: var(--dark); color: white; padding: 2rem; border-radius: 12px; margin-top: 3rem;">
+            <h2>Chatbot Agent Assessment</h2>
+            <p>1. What is the difference between a rule-based and an AI chatbot?</p>
+            <p>2. What role does NLP play in the chatbot workflow?</p>
+            <p>3. Name three business benefits of implementing AI agents.</p>
+            <button onclick="alert('1. Rule-based follows scripts; AI understands intent.\n2. It breaks down raw text into meaning/intent.\n3. 24/7 Availability, Cost Reduction, and Scalability.')">Check Answers</button>
+        </section>
+
+        <footer style="text-align: center; padding: 4rem 0; opacity: 0.8;">
+            <p>"The future of interaction is conversational—and AI chatbots are leading that transformation."</p>
+        </footer>
+    </div>
+
+    <script>lucide.createIcons();</script>
 </body>
 </html>
