@@ -3,55 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>What is AI? - Module 1</title>
+    <title>What is AI? - Master Module 1</title>
     <link rel="stylesheet" href="../assets/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .hero-section { background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=1200'); background-size: cover; color: white; padding: 4rem 2rem; border-radius: 15px; text-align: center; margin-bottom: 3rem; }
+        .logic-flow { display: flex; justify-content: space-between; align-items: center; margin: 3rem 0; padding: 2rem; background: #f8fafc; border-radius: 12px; border: 1px solid #e2e8f0; }
+        .logic-step { text-align: center; flex: 1; }
+        .logic-arrow { color: var(--primary); font-weight: bold; font-size: 1.5rem; }
+        .capability-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+        .cap-card { background: white; padding: 1.5rem; border-radius: 10px; border-bottom: 4px solid var(--secondary); text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .history-line { border-left: 3px solid var(--primary); padding-left: 2rem; margin: 2rem 0; }
+        .history-event { margin-bottom: 1.5rem; position: relative; }
+        .history-event::before { content: ''; position: absolute; left: -2.4rem; top: 5px; width: 12px; height: 12px; background: var(--primary); border-radius: 50%; }
+    </style>
 </head>
 <body>
-    <nav style="padding: 1rem; background: #eee;">
-        <a href="../index.html">← Back to Course Home</a>
+    <nav class="nav-bar">
+        <a href="../index.html">← Back to Course Overview</a>
+        <span>Module 1: Foundations of AI</span>
     </nav>
 
-    <main class="container">
-        <article>
-            <h1>Module 1: The Foundations of AI</h1>
-            <p>Artificial Intelligence (AI) isn't magic—it's math, data, and pattern recognition working at incredible speeds.</p>
+    <div class="container">
+        <div class="hero-section">
+            <h1 style="color: #60a5fa;">What is Artificial Intelligence?</h1>
+            <p style="font-size: 1.2rem; max-width: 800px; margin: 1rem auto;">Demystifying the technology that allows machines to think, learn, and solve problems like humans.</p>
+        </div>
 
-            <section>
-                <h2>What is AI?</h2>
-                <p>At its core, AI is the simulation of human intelligence by machines. This includes learning (acquiring information), reasoning (using rules to reach conclusions), and self-correction.</p>
-                
-                <div class="card" style="background: #fffbe6; border-left: 5px solid #fadb14;">
-                    <strong>The Simple Definition:</strong> If a computer can perform a task that usually requires a human brain—like recognizing a face or translating a language—it's using AI.
-                </div>
-            </section>
+        <section class="pro-tip">
+            <h3>Learning Objectives</h3>
+            <p>Define AI clearly, understand the "Data-Model-Feedback" loop, and distinguish between <strong>Narrow AI</strong> and <strong>General AI</strong>.</p>
+        </section>
 
-            <section>
-                <h2>Why It Matters</h2>
-                <p>AI is often called the "Fourth Industrial Revolution." It is important because:</p>
-                <ul>
-                    <li><strong>Scalability:</strong> It can analyze millions of documents in seconds.</li>
-                    <li><strong>Availability:</strong> AI doesn't sleep; it provides 24/7 support and monitoring.</li>
-                    <li><strong>Personalization:</strong> It helps tailor education, medicine, and shopping to the individual.</li>
-                </ul>
-            </section>
+        <h2 style="margin-top: 4rem;">Understanding the Core</h2>
+        <p>AI is the simulation of human intelligence by machines. It isn't just "coding"; it's building systems that <strong>improve themselves</strong> through experience.</p>
+        
+        <div class="capability-grid">
+            <div class="cap-card"><i data-lucide="brain"></i><br><strong>Reasoning</strong></div>
+            <div class="cap-card"><i data-lucide="database"></i><br><strong>Learning</strong></div>
+            <div class="cap-card"><i data-lucide="message-square"></i><br><strong>NLP</strong></div>
+            <div class="cap-card"><i data-lucide="eye"></i><br><strong>Vision</strong></div>
+        </div>
 
-            <section>
-                <h2>The Dangers & Ethics</h2>
-                <p>Understanding AI also means understanding its risks:</p>
-                <ul>
-                    <li><strong>Bias:</strong> If the data fed into AI is biased, the output will be too.</li>
-                    <li><strong>Privacy:</strong> Large models require vast amounts of data, raising concerns about where that data comes from.</li>
-                    <li><strong>Job Displacement:</strong> While AI creates new roles, it also automates many traditional ones.</li>
-                </ul>
-            </section>
+        <h2 style="margin-top: 4rem;">The AI Engine: How it Works</h2>
+        <p>Every AI system follows a fundamental processing loop. It doesn't "know" things—it identifies <strong>patterns</strong> in massive datasets.</p>
+        
+        
 
-            <section id="quiz">
-                <h3>Quick Check</h3>
-                <p>Does AI actually "think" like a human?</p>
-                <button onclick="alert('Correct! AI mimics patterns; it doesn\'t have consciousness or feelings.')">No, it processes patterns.</button>
-                <button onclick="alert('Try again! While it seems smart, it is ultimately running code and math.')">Yes, it has its own thoughts.</button>
-            </section>
-        </article>
-    </main>
+        <div class="logic-flow">
+            <div class="logic-step"><strong>Data</strong><br><small>Raw information</small></div>
+            <div class="logic-arrow">→</div>
+            <div class="logic-step"><strong>Algorithm</strong><br><small>The rules/math</small></div>
+            <div class="logic-arrow">→</div>
+            <div class="logic-step"><strong>Model</strong><br><small>The trained system</small></div>
+            <div class="logic-arrow">→</div>
+            <div class="logic-step"><strong>Prediction</strong><br><small>The output</small></div>
+        </div>
+
+        <h2 style="margin-top: 4rem;">Types of Intelligence</h2>
+        <div class="grid-layout">
+            <div class="card">
+                <h3>Narrow AI (Weak AI)</h3>
+                <p>Designed for one specific task. Every AI we use today (ChatGPT, Netflix, FaceID) is Narrow AI.</p>
+            </div>
+            <div class="card" style="opacity: 0.7; border-style: dashed;">
+                <h3>General AI (Strong AI)</h3>
+                <p>Human-level intelligence across all domains. This remains theoretical and has not been achieved yet.</p>
+            </div>
+        </div>
+
+        <h2 style="margin-top: 4rem;">A Brief History</h2>
+        <div class="history-line">
+            <div class="history-event">
+                <strong>1950s: The Birth</strong><br>Alan Turing asks "Can machines think?" and the term "Artificial Intelligence" is coined.
+            </div>
+            <div class="history-event">
+                <strong>1970s - 1990s: AI Winters</strong><br>Periods of slow progress due to lack of data and computing power.
+            </div>
+            <div class="history-event">
+                <strong>2010s - Present: The Boom</strong><br>The rise of Big Data and GPU computing leads to Deep Learning and Generative AI.
+            </div>
+        </div>
+
+        <section class="card" style="border-left: 5px solid var(--danger); margin-top: 3rem;">
+            <h3>The Responsibility Factor</h3>
+            <p>AI brings immense benefits in speed and accuracy, but it also introduces <strong>Bias</strong>, <strong>Privacy Risks</strong>, and <strong>Job Displacement</strong>. Understanding AI is the first step to navigating these challenges.</p>
+        </section>
+
+        <section class="quiz-box" style="background: var(--dark); color: white; padding: 2rem; border-radius: 12px; margin-top: 3rem;">
+            <h2>Introductory Assessment</h2>
+            <p>1. What is the primary difference between AI and traditional software?</p>
+            <p>2. Give an example of "Narrow AI" you used today.</p>
+            <p>3. What are the three components of the AI processing loop?</p>
+            <button onclick="alert('1. Traditional software follows fixed rules; AI learns and improves from data.\n2. E.g., Spotify recommendations, FaceID, or Email spam filters.\n3. Data, Algorithm, and Model.')">Check Answers</button>
+        </section>
+
+        <footer style="text-align: center; padding: 4rem 0; opacity: 0.8;">
+            <p>"The goal is not just to learn about AI—but to lead with it."</p>
+        </footer>
+    </div>
+
+    <script>lucide.createIcons();</script>
 </body>
-</html>
+    </html>
+    
