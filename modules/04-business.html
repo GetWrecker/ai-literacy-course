@@ -1,23 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8"><link rel="stylesheet" href="../assets/style.css"><title>Business & GEO</title></head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI for Business & GEO - Master Module</title>
+    <link rel="stylesheet" href="../assets/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .business-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 2rem 0; }
+        .dept-card { background: white; border-top: 4px solid var(--primary); padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .dept-card h3 { display: flex; align-items: center; gap: 8px; margin-top: 0; color: var(--dark); }
+        .geo-box { background: linear-gradient(135deg, #1e293b 0%, #334155 100%); color: white; padding: 2.5rem; border-radius: 15px; margin: 3rem 0; position: relative; overflow: hidden; }
+        .geo-box h2 { color: #38bdf8; margin-top: 0; }
+        .geo-strategy { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 1.5rem; }
+        .strategy-item { background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 8px; border-left: 3px solid #38bdf8; }
+        .comparison-table { width: 100%; border-radius: 8px; overflow: hidden; margin: 2rem 0; }
+        .comparison-table th { background: var(--primary); color: white; }
+        @media (max-width: 768px) { .geo-strategy { grid-template-columns: 1fr; } }
+    </style>
+</head>
 <body>
-    <nav class="nav-bar"><a href="../index.html">← Back to Course</a><span>Module 4: Business Strategy</span></nav>
-    <div class="container">
-        <h1>Generative Engine Optimization (GEO)</h1>
-        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200" class="hero-img">
-        
-        <h2>The Shift from SEO to GEO</h2>
-        <p>In 2026, websites aren't just ranked; they are <strong>synthesized</strong>. GEO ensures your brand is the "Source of Truth" for AI models.</p>
+    <nav class="nav-bar">
+        <a href="../index.html">← Back to Dashboard</a>
+        <span>Module 4: Business Strategy & GEO</span>
+    </nav>
 
-        <div class="pro-tip">
-            <h3>Strategic Checklist:</h3>
-            <ul>
-                <li><strong>Direct Answers:</strong> Place clear definitions at the start of articles.</li>
-                <li><strong>Fact-Density:</strong> Use hard data (e.g., "98% satisfaction") over vague marketing.</li>
-                <li><strong>Citation Hooks:</strong> Write original research that AI models <em>must</em> quote.</li>
-            </ul>
+    <div class="container">
+        <header style="margin-bottom: 3rem;">
+            <h1>AI in Modern Business</h1>
+            <p>From automating internal operations to dominating the new era of AI Search (GEO).</p>
+        </header>
+
+        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200" class="hero-img">
+
+        <section id="intro" class="pro-tip">
+            <h3>Learning Objectives</h3>
+            <p>Identify AI use cases across Sales, Marketing, HR, and Finance while mastering the shift from traditional SEO to <strong>Generative Engine Optimization</strong>.</p>
+        </section>
+
+        <h2 style="margin-top: 4rem;">The Business Value Matrix</h2>
+        <div class="business-grid">
+            <div class="dept-card">
+                <h3><i data-lucide="megaphone"></i> Marketing</h3>
+                <p>Personalization at scale, predictive analytics for ad spend, and AI-generated content creation.</p>
+            </div>
+            <div class="dept-card">
+                <h3><i data-lucide="trending-up"></i> Sales</h3>
+                <p>Lead scoring models and 24/7 automated follow-ups via intelligent CRM systems.</p>
+            </div>
+            <div class="dept-card">
+                <h3><i data-lucide="headphones"></i> Support</h3>
+                <p>Sentiment analysis to prioritize urgent tickets and chatbots for instant tier-1 resolution.</p>
+            </div>
+            <div class="dept-card">
+                <h3><i data-lucide="settings"></i> Operations</h3>
+                <p>Supply chain demand prediction and computer-vision based quality control in manufacturing.</p>
+            </div>
+            <div class="dept-card">
+                <h3><i data-lucide="users"></i> HR</h3>
+                <p>Resume screening and employee turnover prediction using performance analytics.</p>
+            </div>
+            <div class="dept-card">
+                <h3><i data-lucide="pie-chart"></i> Finance</h3>
+                <p>Automated fraud detection and real-time revenue forecasting models.</p>
+            </div>
         </div>
+
+        <div class="geo-box">
+            <h2>GEO: Generative Engine Optimization</h2>
+            <p>Traditional SEO was about <strong>Ranking</strong>. GEO is about <strong>Citations</strong>. In 2026, being "the answer" in ChatGPT or Gemini is more valuable than being "link #1" on Google.</p>
+            
+            <div class="geo-strategy">
+                <div class="strategy-item">
+                    <h4>1. Structured Authority</h4>
+                    <p>Use clear H2/H3 headers. AI prefers organized, fact-dense data over conversational fluff.</p>
+                </div>
+                <div class="strategy-item">
+                    <h4>2. Direct Answer Logic</h4>
+                    <p>Structure your content to answer "Who, What, How" in the first 50 words of a section.</p>
+                </div>
+                <div class="strategy-item">
+                    <h4>3. Contextual Expertise</h4>
+                    <p>AI scans for "Source of Truth" signals. Maintain consistency across your site, LinkedIn, and forums.</p>
+                </div>
+                <div class="strategy-item">
+                    <h4>4. AI-Friendly Data</h4>
+                    <p>Use tables and lists. AI crawlers can ingest structured data much faster than long paragraphs.</p>
+                </div>
+            </div>
+        </div>
+
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Feature</th>
+                    <th>Traditional SEO</th>
+                    <th>GEO (AI Search)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Goal</strong></td>
+                    <td>Click-through to website</td>
+                    <td>Being cited as the "Source"</td>
+                </tr>
+                <tr>
+                    <td><strong>Focus</strong></td>
+                    <td>Keywords & Backlinks</td>
+                    <td>Expertise, Authority & Context</td>
+                </tr>
+                <tr>
+                    <td><strong>Format</strong></td>
+                    <td>Articles & Blogs</td>
+                    <td>Structured Data, FAQs & Tables</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <section class="card" style="border-left: 5px solid var(--danger); margin-top: 3rem;">
+            <h3>Challenges & Risks</h3>
+            <p>Implementation is high-cost, and heavy dependence on AI can lead to "skill gaps" in your workforce. Always ensure data privacy compliance (GDPR/CCPA).</p>
+        </section>
+
+        <section class="quiz-box" style="background: var(--dark); color: white; padding: 2rem; border-radius: 12px; margin-top: 2rem;">
+            <h2>Business & GEO Assessment</h2>
+            <p>1. How does GEO differ from traditional SEO?</p>
+            <p>2. Which business department uses AI for "Sentiment Analysis"?</p>
+            <p>3. What is one way AI helps in Supply Chain Management?</p>
+            <button onclick="alert('1. SEO focuses on ranking links; GEO focuses on being the cited answer in AI outputs.\n2. Customer Support/Marketing.\n3. Predicting demand and optimizing inventory levels.')">Reveal Answers</button>
+        </section>
+
+        <footer style="text-align: center; padding: 4rem 0; opacity: 0.7;">
+            <p>"The goal is not just to use AI—but to integrate it strategically across your entire business."</p>
+        </footer>
     </div>
+
+    <script>lucide.createIcons();</script>
 </body>
-</html>
+    </html>
+                                                                                    
