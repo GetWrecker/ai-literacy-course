@@ -22,27 +22,30 @@
             text-align: center; box-shadow: 0 10px 25px rgba(0,0,0,0.5);
             width: 90%; max-width: 400px;
         }
-        .gate-content h2 { margin-bottom: 1rem; color: #3b82f6; }
+        .gate-content h2 { margin-bottom: 1rem; color: #3b82f6; font-size: 1.5rem; }
+        .gate-content p { font-size: 0.9rem; color: #64748b; margin-bottom: 1rem; }
         .gate-content input {
             width: 100%; padding: 12px; margin: 1rem 0;
             border: 2px solid #e2e8f0; border-radius: 8px;
-            font-size: 1rem; text-align: center;
+            font-size: 1rem; text-align: center; outline: none;
         }
+        .gate-content input:focus { border-color: #3b82f6; }
         .gate-content button {
             background: #3b82f6; color: white; border: none;
             padding: 12px 30px; border-radius: 8px;
-            cursor: pointer; font-weight: bold; width: 100%;
+            cursor: pointer; font-weight: bold; width: 100%; transition: 0.2s;
         }
         .gate-content button:hover { background: #2563eb; }
-        #error-msg { color: #ef4444; font-size: 0.9rem; margin-top: 10px; display: none; }
+        #error-msg { color: #ef4444; font-size: 0.85rem; margin-top: 10px; display: none; font-weight: 500; }
     </style>
 </head>
 <body>
+
     <div id="access-gate">
         <div class="gate-content">
             <h2>Restricted Access</h2>
             <p>Please enter your passcode to view the AI Master Modules.</p>
-            <input type="password" id="pass-input" placeholder="Enter Passcode">
+            <input type="password" id="pass-input" placeholder="Enter Passcode" autofocus>
             <button onclick="checkPasscode()">Enter Dashboard</button>
             <div id="error-msg">Incorrect passcode. Please try again.</div>
         </div>
@@ -53,13 +56,14 @@
         const input = document.getElementById('pass-input');
         const error = document.getElementById('error-msg');
 
-        // Check if authorized in this session
+        // Check for existing session authorization
         if (sessionStorage.getItem('isAuthorized') === 'true') {
             gate.style.display = 'none';
         }
 
         function checkPasscode() {
-            const val = input.value.toLowerCase();
+            const val = input.value.toLowerCase().trim();
+            // Validating against both allowed passcodes
             if (val === 'angpogiko' || val === 'angganako') {
                 sessionStorage.setItem('isAuthorized', 'true');
                 gate.style.display = 'none';
@@ -70,6 +74,7 @@
             }
         }
 
+        // Listen for Enter key
         input.addEventListener("keypress", function(e) {
             if (e.key === "Enter") checkPasscode();
         });
