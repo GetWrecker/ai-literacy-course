@@ -1,22 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8"><link rel="stylesheet" href="../assets/style.css"><title>LLMs Explained</title></head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Large Language Models (LLMs) - Master Module</title>
+    <link rel="stylesheet" href="../assets/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .token-display { background: #1e293b; color: #f8fafc; padding: 1.5rem; border-radius: 8px; font-family: 'Courier New', Courier, monospace; line-height: 2; margin: 1rem 0; }
+        .token { display: inline-block; padding: 0 4px; margin: 2px; border-radius: 4px; border: 1px solid #334155; }
+        .t1 { background: #1e3a8a; } .t2 { background: #312e81; } .t3 { background: #4c1d95; }
+        .arch-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2rem 0; }
+        .concept-card { border-left: 4px solid var(--accent); padding: 1rem; background: white; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .capability-pill { display: inline-block; background: #ede9fe; color: #5b21b6; padding: 4px 12px; border-radius: 15px; margin: 5px; font-size: 0.9rem; font-weight: 500; }
+        .warning-box { background: #fff7ed; border: 1px solid #ffedd5; color: #9a3412; padding: 1rem; border-radius: 8px; margin: 1.5rem 0; }
+    </style>
+</head>
 <body>
-    <nav class="nav-bar"><a href="../index.html">← Back</a></nav>
+    <nav class="nav-bar">
+        <a href="../index.html">← Back to Dashboard</a>
+        <span>Module 6: LLM Core Technology</span>
+    </nav>
+
     <div class="container">
-        <h1>How LLMs Predict the World</h1>
+        <header style="margin-bottom: 3rem;">
+            <h1>Large Language Models (LLMs)</h1>
+            <p>Demystifying the "Next-Token Predictors" that power the modern AI revolution.</p>
+        </header>
+
         <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1200" class="hero-img">
+
+        <section class="pro-tip">
+            <h3>Learning Objectives</h3>
+            <p>Master the mechanics of tokenization, understand the Transformer architecture, and learn to distinguish between pre-training, fine-tuning, and RAG.</p>
+        </section>
+
+        <h2>How LLMs "Read" and "Predict"</h2>
+        <p>LLMs don't see words. They see <strong>Tokens</strong>—mathematical representations of text chunks. They function as highly advanced probability engines.</p>
         
-        <h2>Tokens and Probability</h2>
-        <p>Large Language Models don't read "words"; they process <strong>tokens</strong>. AI acts as a sophisticated "Next Token Predictor."</p>
-        
-        <div class="card">
-            <h3>Example: The Cat sat on the...</h3>
-            <p>AI calculates the probability of the next token: <br>
-            - "Mat" (85%) <br>
-            - "Floor" (10%) <br>
-            - "Pizza" (0.1%)</p>
+        <div class="token-display">
+            <span class="token t1">Large</span> <span class="token t2">Lan</span><span class="token t3">guage</span> <span class="token t1">Models</span> <span class="token t2">pre</span><span class="token t3">dict</span> <span class="token t1">the</span> <span class="token t2">next</span> <span class="token t3">word.</span>
         </div>
+        
+        <p>When you ask a question, the model calculates the mathematical probability of every possible next token based on its training data.</p>
+
+        <h2 style="margin-top: 4rem;">The Transformer Architecture</h2>
+        <p>Introduced by Google in 2017, the <em>Transformer</em> allows AI to pay "Attention" to different parts of a sentence simultaneously.</p>
+        [attachment_0](attachment)
+        <div class="arch-grid">
+            <div class="concept-card">
+                <h4>Self-Attention</h4>
+                <p>The ability to link "it" to "the robot" earlier in a 50-page document.</p>
+            </div>
+            <div class="concept-card">
+                <h4>Embeddings</h4>
+                <p>Turning words into multi-dimensional vectors so the AI understands "King" is related to "Queen."</p>
+            </div>
+        </div>
+
+        <h2>Core Capabilities</h2>
+        <div style="margin: 1.5rem 0;">
+            <span class="capability-pill">Summarization</span>
+            <span class="capability-pill">Code Generation</span>
+            <span class="capability-pill">Sentiment Analysis</span>
+            <span class="capability-pill">Reasoning</span>
+            <span class="capability-pill">Language Translation</span>
+        </div>
+
+        <h2>Fine-Tuning vs. RAG</h2>
+        <div class="grid-layout">
+            <div class="card">
+                <h3>Fine-Tuning</h3>
+                <p>Updating the actual weights of the brain. Best for teaching a specific <strong>tone</strong> or <strong>style</strong>.</p>
+            </div>
+            <div class="card">
+                <h3>RAG</h3>
+                <p>Retrieval-Augmented Generation. Giving the AI an "open book" to read. Best for <strong>accuracy</strong> and <strong>private data</strong>.</p>
+            </div>
+        </div>
+
+        <div class="warning-box">
+            <h4><i data-lucide="alert-triangle"></i> Important Limitations</h4>
+            <ul>
+                <li><strong>Hallucinations:</strong> The model may confidently state a "fact" that is statistically probable but factually wrong.</li>
+                <li><strong>Knowledge Cutoff:</strong> Models are frozen in time based on their last training date unless connected to the web.</li>
+            </ul>
+        </div>
+
+        <section class="quiz-box" style="background: var(--dark); color: white; padding: 2rem; border-radius: 12px; margin-top: 3rem;">
+            <h2>LLM Technology Assessment</h2>
+            <p>1. What is a "Token" in the context of an LLM?</p>
+            <p>2. How does the Attention Mechanism improve AI understanding?</p>
+            <p>3. When should you use RAG instead of Fine-Tuning?</p>
+            <button onclick="alert('1. A mathematical unit of text (word or part of a word).\n2. It allows the model to understand the relationship between distant words in a sentence.\n3. Use RAG when you need access to real-time or private external data without changing the model itself.')">View Answers</button>
+        </section>
+
+        <footer style="text-align: center; padding: 4rem 0; opacity: 0.8;">
+            <p>"Understanding LLMs is essential to unlocking the full potential of AI."</p>
+        </footer>
     </div>
+
+    <script>lucide.createIcons();</script>
 </body>
-</html>
+            </html>
+            
