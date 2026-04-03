@@ -1,31 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"><title>Pros vs. Cons</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Pros & Cons - Final Module</title>
     <link rel="stylesheet" href="../assets/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .split-view { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 3rem 0; }
+        .pro-list { border-top: 5px solid #22c55e; background: #f0fdf4; padding: 2rem; border-radius: 12px; }
+        .con-list { border-top: 5px solid #ef4444; background: #fef2f2; padding: 2rem; border-radius: 12px; }
+        .impact-card { background: white; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .impact-card h4 { margin: 0 0 0.5rem 0; display: flex; align-items: center; gap: 8px; }
+        .ethical-pillar { text-align: center; padding: 1.5rem; border: 1px solid #e2e8f0; border-radius: 10px; transition: all 0.3s ease; }
+        .ethical-pillar:hover { border-color: var(--primary); transform: translateY(-5px); }
+        .balance-footer { background: var(--dark); color: white; padding: 3rem; border-radius: 20px; text-align: center; margin-top: 4rem; }
+        @media (max-width: 768px) { .split-view { grid-template-columns: 1fr; } }
+    </style>
 </head>
 <body>
-    <div class="nav-bar"><a href="../index.html">← Home</a> | Module 9: The Balance</div>
+    <nav class="nav-bar">
+        <a href="../index.html">← Back to Dashboard</a>
+        <span>Module 9: The Ethical Balance</span>
+    </nav>
+
     <div class="container">
-        <h1>The AI Balance Sheet</h1>
-        <table>
-            <tr>
-                <th>Advantages</th>
-                <th>Disadvantages</th>
-            </tr>
-            <tr>
-                <td><strong>24/7 Productivity:</strong> AI never gets tired or needs breaks.</td>
-                <td><strong>Hallucinations:</strong> AI can make up facts that sound very real.</td>
-            </tr>
-            <tr>
-                <td><strong>Creative Partner:</strong> Overcomes "blank page" syndrome instantly.</td>
-                <td><strong>Job Shifts:</strong> Traditional roles are evolving or being automated.</td>
-            </tr>
-            <tr>
-                <td><strong>Personalization:</strong> Custom learning paths for every student.</td>
-                <td><strong>Privacy Risks:</strong> Sensitive data can be leaked if not handled carefully.</td>
-            </tr>
-        </table>
+        <header style="margin-bottom: 3rem;">
+            <h1>AI Pros & Cons: A Balanced View</h1>
+            <p>Evaluating the double-edged sword of Artificial Intelligence in the 2026 landscape.</p>
+        </header>
+
+        <img src="https://images.unsplash.com/photo-1454165833767-027e38e113d4?auto=format&fit=crop&q=80&w=1200" class="hero-img">
+
+        <section class="pro-tip">
+            <h3>Learning Objectives</h3>
+            <p>Critically evaluate AI through economic, societal, and ethical lenses to make informed decisions about integration and usage.</p>
+        </section>
+
+        <div class="split-view">
+            <div class="pro-list">
+                <h2 style="color: #166534;"><i data-lucide="trending-up"></i> The Advantages</h2>
+                <div class="impact-card">
+                    <h4>Hyper-Productivity</h4>
+                    <p>Automating repetitive tasks allows humans to focus on high-level strategy and creativity.</p>
+                </div>
+                <div class="impact-card">
+                    <h4>24/7 Precision</h4>
+                    <p>AI doesn't get tired. It maintains 99.9% accuracy in data processing and diagnostics at all hours.</p>
+                </div>
+                <div class="impact-card">
+                    <h4>Accelerated Innovation</h4>
+                    <p>From drug discovery to climate modeling, AI processes decades of research in weeks.</p>
+                </div>
+            </div>
+
+            <div class="con-list">
+                <h2 style="color: #991b1b;"><i data-lucide="trending-down"></i> The Risks</h2>
+                <div class="impact-card">
+                    <h4>Structural Displacement</h4>
+                    <p>The rapid automation of roles creates significant short-term economic inequality and job loss.</p>
+                </div>
+                <div class="impact-card">
+                    <h4>The "Black Box" Bias</h4>
+                    <p>AI models can inherit and amplify human prejudices hidden within their training data.</p>
+                </div>
+                <div class="impact-card">
+                    <h4>Privacy Erosion</h4>
+                    <p>Massive data harvesting for model training creates unprecedented surveillance and security risks.</p>
+                </div>
+            </div>
+        </div>
+
+        <h2 style="text-align: center; margin-top: 4rem;">The Four Pillars of Ethical AI</h2>
+        <div class="grid-layout" style="margin-top: 2rem;">
+            <div class="ethical-pillar">
+                <i data-lucide="shield-check" style="color: var(--primary);"></i>
+                <h4>Accountability</h4>
+                <p>Who is responsible when an autonomous system makes a mistake?</p>
+            </div>
+            <div class="ethical-pillar">
+                <i data-lucide="eye" style="color: var(--primary);"></i>
+                <h4>Transparency</h4>
+                <p>Ensuring AI decisions are explainable and "open-source" in logic.</p>
+            </div>
+            <div class="ethical-pillar">
+                <i data-lucide="scale" style="color: var(--primary);"></i>
+                <h4>Fairness</h4>
+                <p>Actively auditing models to remove gender, racial, and socio-economic bias.</p>
+            </div>
+            <div class="ethical-pillar">
+                <i data-lucide="user-check" style="color: var(--primary);"></i>
+                <h4>Human Oversight</h4>
+                <p>Keeping a "Human-in-the-Loop" for all critical and ethical decisions.</p>
+            </div>
+        </div>
+
+        <section class="card" style="margin-top: 4rem; background: #f8fafc;">
+            <h3>Module 9 Exercise: The Impact Audit</h3>
+            <p>Pick one AI tool you use daily (e.g., ChatGPT, Gemini, or a Smart Assistant) and list:</p>
+            <ol>
+                <li>One way it makes you 10x faster.</li>
+                <li>One way it might be making you "mentally lazy" or overdependent.</li>
+                <li>One privacy trade-off you make to use it.</li>
+            </ol>
+        </section>
+
+        <div class="balance-footer">
+            <h2>The Goal: Human-AI Collaboration</h2>
+            <p style="font-size: 1.2rem; opacity: 0.9; max-width: 700px; margin: 1rem auto;">
+                "The goal is not to avoid AI—but to use it wisely and responsibly. We must treat AI as a tool that enhances human potential, not a replacement for human judgment."
+            </p>
+            <div style="margin-top: 2rem;">
+                <a href="../index.html" class="cta-button" style="background: var(--primary); color: white;">Course Complete</a>
+            </div>
+        </div>
     </div>
+
+    <script>lucide.createIcons();</script>
 </body>
 </html>
