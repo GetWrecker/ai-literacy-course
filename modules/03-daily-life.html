@@ -3,71 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI in Daily Life - Module 3</title>
+    <title>AI in Daily Life - Master Module</title>
     <link rel="stylesheet" href="../assets/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .timeline { position: relative; max-width: 1200px; margin: 2rem auto; }
+        .timeline::after { content: ''; position: absolute; width: 6px; background-color: var(--primary); top: 0; bottom: 0; left: 50%; margin-left: -3px; }
+        .time-container { padding: 10px 40px; position: relative; background-color: inherit; width: 50%; }
+        .time-container::after { content: ''; position: absolute; width: 25px; height: 25px; right: -17px; background-color: white; border: 4px solid var(--secondary); top: 15px; border-radius: 50%; z-index: 1; }
+        .left { left: 0; }
+        .right { left: 50%; }
+        .right::after { left: -16px; }
+        .time-content { padding: 20px 30px; background-color: white; position: relative; border-radius: 6px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        @media screen and (max-width: 600px) {
+            .timeline::after { left: 31px; }
+            .time-container { width: 100%; padding-left: 70px; padding-right: 25px; }
+            .time-container::after { left: 15px; }
+            .right { left: 0%; }
+        }
+        .benefit-tag { display: inline-block; background: #dcfce7; color: #166534; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; margin-bottom: 5px; }
+    </style>
 </head>
 <body>
-    <nav style="padding: 1rem; background: #eee;">
-        <a href="../index.html">← Back to Course Home</a>
+    <nav class="nav-bar">
+        <a href="../index.html">← Back to Dashboard</a>
+        <span>Module 3: Daily Life Integration</span>
     </nav>
 
-    <main class="container">
-        <article>
-            <h1>Module 3: AI in Your Daily Life</h1>
-            <p>You don't need to be a scientist to use AI. In fact, you've likely used it several times today already.</p>
+    <div class="container">
+        <header style="text-align: center; margin-bottom: 3rem;">
+            <h1>AI in Your Daily Life</h1>
+            <p>From the moment you wake up to the time you sleep, AI is your invisible partner.</p>
+        </header>
 
-            <section>
-                <h2>1. The "Invisible" AI</h2>
-                <p>AI often works behind the scenes to make our digital experiences smoother:</p>
-                <ul>
-                    <li><strong>Smart Keyboards:</strong> Predictive text and autocorrect use NLP (Natural Language Processing) to guess your next word.</li>
-                    <li><strong>Streaming Services:</strong> Netflix and Spotify use recommendation engines to suggest content based on your past behavior.</li>
-                    <li><strong>Navigation:</strong> Google Maps uses AI to predict traffic patterns and suggest the fastest routes in real-time.</li>
-                </ul>
-            </section>
+        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=1200" class="hero-img">
 
-            <section>
-                <h2>2. AI as a Personal Assistant</h2>
-                <p>Modern Generative AI (like ChatGPT or Gemini) acts as a "second brain" for productivity:</p>
-                <div class="card" style="border-left: 5px solid #10b981; background: #ecfdf5;">
-                    <strong>Daily Hacks:</strong>
-                    <ul>
-                        <li>Summarizing long emails or articles.</li>
-                        <li>Drafting meal plans based on what's in your fridge.</li>
-                        <li>Explaining complex topics (like taxes or physics) in simple terms.</li>
-                    </ul>
+        <section id="objectives" class="pro-tip">
+            <h3>Learning Objectives</h3>
+            <ul>
+                <li>Identify AI in communication, productivity, and health.</li>
+                <li>Apply AI tools to save time and reduce errors.</li>
+                <li>Recognize the balance between convenience and privacy.</li>
+            </ul>
+        </section>
+
+        <div class="timeline">
+            <div class="time-container left">
+                <div class="time-content">
+                    <span class="benefit-tag">7:00 AM - Smart Home & Comm</span>
+                    <h3>Morning Routine</h3>
+                    <p>AI-powered smart alarms, thermostats, and <strong>Voice Assistants</strong> (Siri/Alexa) start your day. Spam filters have already cleaned your inbox before you see it.</p>
                 </div>
-            </section>
+            </div>
 
-            <section>
-                <h2>3. Health and Wellness</h2>
-                <p>Wearable devices use AI to monitor your heart rate, sleep patterns, and activity levels, alerting you to potential health issues before they become serious.</p>
-            </section>
-
-            <section id="interactive-check">
-                <h3>Is it AI?</h3>
-                <p>Determine if the following daily tasks use AI:</p>
-                <div id="quiz-options">
-                    <button onclick="checkDaily(true)">FaceID to unlock a phone</button>
-                    <button onclick="checkDaily(false)">Setting a simple kitchen timer</button>
-                    <button onclick="checkDaily(true)">Spam filters in your Email</button>
+            <div class="time-container right">
+                <div class="time-content">
+                    <span class="benefit-tag">10:00 AM - Productivity</span>
+                    <h3>The Efficient Workspace</h3>
+                    <p>AI writing assistants (Grammarly/ChatGPT) draft emails. <strong>Coding Assistants</strong> suggest lines of logic, and AI transcribes your Zoom meetings in real-time.</p>
                 </div>
-                <p id="daily-feedback" style="margin-top: 15px; font-weight: bold;"></p>
-            </section>
-        </article>
-    </main>
+            </div>
 
-    <script>
-        function checkDaily(isAI) {
-            const feedback = document.getElementById('daily-feedback');
-            if (isAI) {
-                feedback.innerText = "Correct! That uses pattern recognition or machine learning.";
-                feedback.style.color = "#059669";
-            } else {
-                feedback.innerText = "That's a simple mechanical or digital rule, not AI.";
-                feedback.style.color = "#4b5563";
-            }
-        }
-    </script>
+            <div class="time-container left">
+                <div class="time-content">
+                    <span class="benefit-tag">12:30 PM - E-Commerce</span>
+                    <h3>Smart Shopping</h3>
+                    <p>Dynamic pricing on Amazon and personalized "Recommended for You" sections guide your purchases. Behind the scenes, AI is checking your bank transactions for <strong>Fraud Detection</strong>.</p>
+                </div>
+            </div>
+
+            <div class="time-container right">
+                <div class="time-content">
+                    <span class="benefit-tag">5:30 PM - Transport</span>
+                    <h3>Getting Home</h3>
+                    <p>Google Maps uses AI to predict traffic and optimize routes. Ride-sharing apps (Uber/Grab) match you with the nearest driver using complex predictive algorithms.</p>
+                </div>
+            </div>
+
+            <div class="time-container left">
+                <div class="time-content">
+                    <span class="benefit-tag">8:00 PM - Entertainment</span>
+                    <h3>Relax & Unwind</h3>
+                    <p>Netflix and Spotify recommendation engines curate your evening. Intelligent NPC behavior in video games adapts to your skill level for a tailored experience.</p>
+                </div>
+            </div>
+        </div>
+
+        <hr style="margin: 4rem 0;">
+
+        <div class="grid-layout">
+            <div class="card">
+                <i data-lucide="heart-pulse"></i>
+                <h3>AI in Healthcare</h3>
+                <p>Wearables track sleep/heart rate, while AI medical imaging assists doctors in faster diagnosis support.</p>
+            </div>
+            <div class="card">
+                <i data-lucide="graduation-cap"></i>
+                <h3>AI in Education</h3>
+                <p>Adaptive learning platforms personalize curriculum speed based on your quiz performance.</p>
+            </div>
+        </div>
+
+        <section class="card" style="margin-top: 3rem; border-left: 5px solid var(--danger);">
+            <h2>Limitations & Concerns</h2>
+            <p>While AI saves time and improves efficiency, we must be aware of:</p>
+            <ul>
+                <li><strong>Privacy Risks:</strong> Personal data harvesting.</li>
+                <li><strong>Overdependence:</strong> Loss of basic critical thinking.</li>
+                <li><strong>Reduced Interaction:</strong> AI replacing human connection.</li>
+            </ul>
+        </section>
+
+        <section class="quiz-box" style="background: var(--dark); color: white; padding: 2rem; border-radius: 12px; margin-top: 2rem;">
+            <h2>Module 3 Quiz</h2>
+            <p>1. How does AI save you time in the morning?</p>
+            <p>2. Give an example of AI in transportation.</p>
+            <p>3. What is one risk of using AI in daily life?</p>
+            <button onclick="alert('1. Spam filtering & Smart Assistants\n2. Route optimization/Traffic prediction\n3. Privacy/Overdependence')">Check My Knowledge</button>
+        </section>
+
+        <footer style="text-align: center; padding: 4rem 0;">
+            <h3>"The goal is not just to use AI—but to use it wisely."</h3>
+        </footer>
+    </div>
+
+    <script>lucide.createIcons();</script>
 </body>
 </html>
