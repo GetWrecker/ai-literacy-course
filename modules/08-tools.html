@@ -1,38 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"><title>AI Tools 2026</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Toolsets & Model Selection - Module 8</title>
     <link rel="stylesheet" href="../assets/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .tool-matrix { width: 100%; border-collapse: collapse; margin: 2rem 0; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .tool-matrix th { background: var(--dark); color: white; padding: 1rem; text-align: left; }
+        .tool-matrix td { padding: 1rem; border-bottom: 1px solid #e2e8f0; }
+        .llm-tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: bold; margin-right: 5px; }
+        .tag-gpt { background: #dcfce7; color: #166534; }
+        .tag-claude { background: #fef2f2; color: #991b1b; }
+        .tag-gemini { background: #e0f2fe; color: #0369a1; }
+        .stack-diagram { background: #f8fafc; border: 2px solid #e2e8f0; padding: 2rem; border-radius: 15px; margin: 2rem 0; text-align: center; }
+        .stack-layer { padding: 1rem; margin: 10px auto; width: 80%; border-radius: 8px; color: white; font-weight: bold; position: relative; }
+        .layer-1 { background: #3b82f6; } /* Frontend */
+        .layer-2 { background: #6366f1; } /* LLM */
+        .layer-3 { background: #8b5cf6; } /* Data/RAG */
+        .layer-4 { background: #a855f7; } /* Automation */
+        .arrow { font-size: 1.5rem; color: #94a3b8; }
+    </style>
 </head>
 <body>
-    <nav class="nav-bar"><a href="../index.html">← Back</a></nav>
+    <nav class="nav-bar">
+        <a href="../index.html">← Back to Dashboard</a>
+        <span>Module 8: Toolsets & Model Matching</span>
+    </nav>
+
     <div class="container">
-        <h1>Module 8: The 2026 Toolset</h1>
+        <header style="margin-bottom: 3rem;">
+            <h1>AI Toolsets & LLM Integration</h1>
+            <p>Choosing the right "Brain" for your "Body." Learn to match specific tasks to the world's most powerful models.</p>
+        </header>
+
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1200" class="hero-img">
+
+        <section class="pro-tip">
+            <h3>Learning Objectives</h3>
+            <p>Identify 12 categories of AI tools, match the best LLM to each use case (GPT vs. Claude vs. Gemini), and understand the <strong>4-Layer AI Stack</strong> strategy.</p>
+        </section>
+
+        <h2>The Model-to-Mission Matrix</h2>
+        <p>In 2026, the best AI systems are "Model Agnostic"—they use the best brain for the specific job at hand.</p>
+        
+        
+
+        <table class="tool-matrix">
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Core Function</th>
+                    <th>Recommended LLM</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Code & Dev</strong></td>
+                    <td>Debugging, Documentation</td>
+                    <td><span class="llm-tag tag-gpt">GPT-4o</span> <span class="llm-tag tag-claude">Claude 3.5</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Creative Writing</strong></td>
+                    <td>Marketing, Long-form blogs</td>
+                    <td><span class="llm-tag tag-claude">Claude</span> (Human Tone)</td>
+                </tr>
+                <tr>
+                    <td><strong>Data Analytics</strong></td>
+                    <td>Forecasting, Reporting</td>
+                    <td><span class="llm-tag tag-gpt">GPT-4o</span> (Logic)</td>
+                </tr>
+                <tr>
+                    <td><strong>Search/Context</strong></td>
+                    <td>Massive PDF/Video analysis</td>
+                    <td><span class="llm-tag tag-gemini">Gemini 1.5/2</span> (2M Context)</td>
+                </tr>
+                <tr>
+                    <td><strong>Automation</strong></td>
+                    <td>Zapier-style task chaining</td>
+                    <td><span class="llm-tag tag-gpt">GPT-4o</span> (Orchestration)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2 style="margin-top: 4rem;">The 4-Layer AI Stack</h2>
+        <p>A professional AI application isn't just a prompt. It is a layered architecture:</p>
+        
+        <div class="stack-diagram">
+            <div class="stack-layer layer-1">1. Frontend (Chat UI / Mobile App)</div>
+            <div class="arrow">↓</div>
+            <div class="stack-layer layer-2">2. LLM Brain (GPT / Claude / Gemini API)</div>
+            <div class="arrow">↓</div>
+            <div class="stack-layer layer-3">3. Data Layer (RAG / Vector Database)</div>
+            <div class="arrow">↓</div>
+            <div class="stack-layer layer-4">4. Automation (APIs / Webhooks)</div>
+        </div>
+
+        <h2>Modern Integration Patterns</h2>
         <div class="grid-layout">
             <div class="card">
-                <h3>Text & Reasoning</h3>
-                <ul>
-                    <li><strong>Claude 4:</strong> Best for coding and logic.</li>
-                    <li><strong>ChatGPT:</strong> Best all-rounder.</li>
-                    <li><strong>NotebookLM:</strong> Best for analyzing your own PDFs.</li>
-                </ul>
+                <h3>API Integration</h3>
+                <p>Connecting your existing website or app to an LLM via an API key. Best for speed.</p>
             </div>
             <div class="card">
-                <h3>Visuals & Media</h3>
-                <ul>
-                    <li><strong>Midjourney v7:</strong> Photorealism.</li>
-                    <li><strong>Veo:</strong> High-end cinematic video.</li>
-                    <li><strong>ElevenLabs:</strong> Industry-standard AI voice.</li>
-                </ul>
-            </div>
-            <div class="card">
-                <h3>Agentic AI (New!)</h3>
-                <ul>
-                    <li><strong>Manus:</strong> An AI that can browse the web and buy things for you.</li>
-                    <li><strong>Replit Agent:</strong> Builds and deploys entire apps from a chat.</li>
-                </ul>
+                <h3>RAG (Retrieval)</h3>
+                <p>Combining the LLM's brain with <strong>your own data</strong> (PDFs, Databases) for zero hallucinations.</p>
             </div>
         </div>
+
+        <div class="pro-tip" style="background: #f8fafc; margin-top: 3rem;">
+            <h4>Strategy over Hype</h4>
+            <p>Choosing the most powerful model for a simple task increases <strong>Latency</strong> (wait time) and <strong>Cost</strong>. Always use the "Smallest Model" that can reliably finish the task.</p>
+        </div>
+
+        <section class="quiz-box" style="background: var(--dark); color: white; padding: 2rem; border-radius: 12px; margin-top: 3rem;">
+            <h2>AI Toolset Assessment</h2>
+            <p>1. Which model is best for analyzing a 1,000-page document or a 2-hour video?</p>
+            <p>2. What is the 3rd layer of the AI Stack?</p>
+            <p>3. Why would a developer choose Claude over GPT for writing?</p>
+            <button onclick="alert('1. Gemini (for its massive context window).\n2. The Data Layer (RAG/Database).\n3. Claude is often cited for having a more natural, less robotic brand tone.')">Check My Knowledge</button>
+        </section>
+
+        <footer style="text-align: center; padding: 4rem 0; opacity: 0.8;">
+            <p>"The future belongs to those who don’t just use AI tools—but understand how to combine them intelligently."</p>
+        </footer>
     </div>
+
+    <script>lucide.createIcons();</script>
 </body>
 </html>
